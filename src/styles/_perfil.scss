@@ -1,0 +1,58 @@
+@use 'variable';
+
+.perfil {
+    padding: 80px 0;
+
+&--foto{
+    background-image: linear-gradient(variable.$red, variable.$black);
+}   
+
+&--buffet {
+    background-image: linear-gradient(variable.$black, variable.$red);
+}
+
+&--karaoke {
+    background-image: linear-gradient(variable.$red, variable.$black);
+}
+
+&--image-left {
+    .container {
+        flex-direction: row-reverse;
+    }
+}
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    &__destaque {
+        &__title {
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+    }
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            max-width: 100%;
+        }
+
+        &__destaque {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+}

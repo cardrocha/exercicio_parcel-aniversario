@@ -1,12 +1,14 @@
 @use 'hero';
 @use 'components/infos_bar';
 @use 'components/buttons';
+@use 'perfil';
+@use 'variable';
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: variable.$textColor;
     font-family: 'Roboto', sans-serif;
     list-style: none;
 }
